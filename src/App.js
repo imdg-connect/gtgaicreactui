@@ -5,7 +5,7 @@ function App() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('https://wappgaicbackend-epd3c4cyh0e3ergw.eastus-01.azurewebsites.net/api/hello')
+    fetch('https://wappgaicbackend-epd3c4cyh0e3ergw.eastus-01.azurewebsites.net/hello')
       .then(response => {
         if (!response.ok) {
           throw new Error(response.statusText);
