@@ -78,7 +78,7 @@ const FileUpload = () => {
       async () => {
         setDeletingFileName(filename);
         try {
-          const response = await fetch(`http://0.0.0.0:8001/delete/${encodeURIComponent(filename)}`, {
+          const response = await fetch(`https://wappbackpocwala-ead4gxcqgec7avg0.eastus-01.azurewebsites.net/delete/${encodeURIComponent(filename)}`, {
             method: 'DELETE',
           });
 
@@ -111,7 +111,7 @@ const FileUpload = () => {
       async () => {
         setIsDeleting(true);
         try {
-          const response = await fetch('http://0.0.0.0:8001/delete-all', {
+          const response = await fetch('https://wappbackpocwala-ead4gxcqgec7avg0.eastus-01.azurewebsites.net/delete-all', {
             method: 'DELETE',
           });
 
@@ -136,7 +136,7 @@ const FileUpload = () => {
     const formData = new FormData();
     formData.append('file', selectedFile);
 
-    fetch('http://0.0.0.0:8001/upload', {
+    fetch('https://wappbackpocwala-ead4gxcqgec7avg0.eastus-01.azurewebsites.net/upload', {
       method: 'POST',
       body: formData,
     })
@@ -161,7 +161,7 @@ const FileUpload = () => {
   };
 
   const fetchFiles = () => {
-    fetch('http://0.0.0.0:8001/list-files')
+    fetch('https://wappbackpocwala-ead4gxcqgec7avg0.eastus-01.azurewebsites.net/list-files')
       .then((response) => response.json())
       .then((data) => {
         setFileList(data.files || []);
@@ -183,7 +183,7 @@ const FileUpload = () => {
   
     setIsSearching(true);
   
-    fetch('http://0.0.0.0:8001/search', {  // Updated URL to match other endpoints
+    fetch('https://wappbackpocwala-ead4gxcqgec7avg0.eastus-01.azurewebsites.net/search', {  // Updated URL to match other endpoints
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
