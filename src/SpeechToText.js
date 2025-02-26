@@ -48,7 +48,7 @@ const SpeechToText = () => {
   return (
     <div>
       <button onClick={handleSpeak} disabled={isRecording}>
-        {isRecording ? 'Recording........' : 'Speak'}
+        {isRecording ? 'This is Recording........' : 'Speak'}
       </button>
       <p>Text is: {text}</p>
     </div>
