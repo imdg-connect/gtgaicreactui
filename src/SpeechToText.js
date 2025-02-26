@@ -29,7 +29,7 @@ const SpeechToText = () => {
           const formData = new FormData();
           formData.append('audio_file', audioBlob);
 
-          axios.post('http://0.0.0.0:8006/speech-to-text', formData)
+          axios.post('https://wappgaicbackendnew-hjdyapc3bff5avdg.eastus-01.azurewebsites.net/speech-to-text', formData)
             .then(response => {
               setText(response.data.text);
             })
